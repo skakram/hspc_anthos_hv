@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+   name: pvc-dc1-wordpress-app
+   annotations:
+    hitachi.io/note: "pvc-dc1-wordpress-app"
+spec:
+   accessModes:
+   - ReadWriteOnce
+   resources:
+      requests:
+         storage: 20Gi
+   storageClassName: sc-ucp-vsp-dc1-platinum
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+   name: pvc-dc1-wordpress-mysql
+   annotations:
+    hitachi.io/note: "pvc-dc1-wordpress-mysql"
+spec:
+   accessModes:
+   - ReadWriteOnce
+   resources:
+      requests:
+         storage: 20Gi
+   storageClassName: sc-ucp-vsp-dc1-platinum

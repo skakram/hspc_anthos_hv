@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  .dockerconfigjson: <<docker-secret>>
+kind: Secret
+metadata:
+  name: regcred-redhat-com
+type: kubernetes.io/dockerconfigjson

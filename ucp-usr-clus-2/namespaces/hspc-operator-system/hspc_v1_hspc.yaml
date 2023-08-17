@@ -1,0 +1,10 @@
+apiVersion: csi.hitachi.com/v1
+kind: HSPC
+metadata:
+  name: hspc
+  annotations:
+    config.kubernetes.io/depends-on: apps/namespaces/hspc-operator-system/Deployment/hspc-operator-controller-manager
+spec: 
+  imagePullSecrets:
+  - regcred-redhat-com
+  - regcred-redhat-io
